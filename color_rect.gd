@@ -1,6 +1,6 @@
 extends TextureRect
 
-@onready var viewport = $"../SubViewportContainer/SubViewport"  # ajusta el path
+@onready var viewport = $"../SubViewportContainer/SubViewport" 
 
 func _ready():
 	var vt = ViewportTexture.new()
