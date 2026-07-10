@@ -40,7 +40,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		global_position.x = get_viewport_rect().size.x - margen_derecho
 
-	# 2. ✅ SEGUIR AL JUGADOR EN Y + OSCILACIÓN (SIN LÍMITES)
+	
 	if jugador:
 		tiempo_oscilacion += delta * frecuencia_tambaleo
 		
@@ -48,7 +48,7 @@ func _physics_process(delta: float) -> void:
 		var offset_tambaleo = sin(tiempo_oscilacion) * amplitud_tambaleo
 		target_y = jugador.global_position.y + offset_tambaleo
 		
-		# ✅ ELIMINADO: Ya no hay clamp que limite el movimiento en Y
+		
 
 	# 3. MOVIMIENTO EN Y CON INERCIA
 	var dir = sign(target_y - global_position.y)
