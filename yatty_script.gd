@@ -4,7 +4,7 @@ const BALA_ENEMIGA = preload("res://enemy_bullet.tscn")
 
 @export var velocidad: float = 1000.0
 @export var distancia_ataque: float = 10000.0
-@export var velocidad_cerca: float = 2000.0  # ✅ NUEVO: Velocidad cuando está cerca
+@export var velocidad_cerca: float = 2000.0
 
 var max_lf = 4
 var jugador: CharacterBody2D = null
@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 	# 2. Rotar para mirar siempre al jugador
 	global_rotation = direccion.angle()
 	
-	# 3. ✅ CORRECCIÓN: Siempre seguir al jugador en Y
+	
 	if distancia > distancia_ataque:
 		# Lejos: velocidad completa
 		velocity.y = direccion.y * velocidad
