@@ -1,15 +1,4 @@
-// ============================================================
-//  VHS RETRO SHADER — Godot 4.x
-//  Nodo: TextureRect hijo de BackBufferCopy (Copy Mode: Viewport)
-//
-//  OPTIMIZACIONES vs versión anterior:
-//    · screen_texture con filter_nearest (evita bilinear sampling)
-//    · Precalculado de t_q fuera de operaciones redundantes
-//    · Scanlines: lookup en vez de fract+step por píxel
-//    · Vignette: dot product mínimo, sin pow()
-//    · Glitch: solo 2 hash calls (antes eran 3)
-//    · Sin smoothstep en head_switch → step simple
-// ============================================================
+#Shader Copied lol
 
 shader_type canvas_item;
 render_mode unshaded, blend_disabled;
