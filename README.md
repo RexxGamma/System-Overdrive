@@ -36,3 +36,4 @@ ________________________________________________________________________________
 
 1. This is an MVP of the game and is under development right now,the game will update soon with QoL changes,bugfixes and more content!
 2. I can't upload files heaviest than 25MB so,the project is in a drive link
+3. Pls don't download the .zip file in this repository,it don't works.I can't delete that file
