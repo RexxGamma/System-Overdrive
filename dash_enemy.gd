@@ -134,10 +134,10 @@ func _create_runtime_wireframe(poly: Polygon2D) -> void:
 	wire_node.rotation = poly.rotation
 	wire_node.scale = poly.scale
 	
-	# Forzamos un Z Index alto para que NADA en el juego lo tape (capas de fondo, etc.)
+	
 	wire_node.z_index = 50
 	
-	# Conectamos el evento de dibujo de Godot dinámicamente usando una función Lambda
+	
 	wire_node.draw.connect(func():
 		var color: Color = poly.color
 		var offset_total = poly.offset # Usamos el offset interno del polígono
