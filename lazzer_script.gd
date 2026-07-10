@@ -35,11 +35,11 @@ func _physics_process(delta: float) -> void:
 	var direccion = vector_hacia_jugador.normalized()
 	posicion_local_jugador = to_local(jugador.global_position)
 	
-	# ✅ CORRECCIÓN 1: Solo mover la línea si puede_apuntar es true, y usar el índice 1
+	
 	if puede_apuntar:
 		$DestroyThemWithLazers.set_point_position(1, posicion_local_jugador)
 	
-	# ✅ CORRECCIÓN 2: Rotación fija durante la carga
+	
 	if !puede_apuntar:
 		global_rotation = vector_fijo.angle() # Apunta a la dirección fija
 	else:
@@ -61,7 +61,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func intentar_disparar() -> void:
-	# ✅ CORRECCIÓN 3: Usar 'cargando' en lugar de dos timers confusos
+	
 	if cargando:
 		return
 	
@@ -81,7 +81,7 @@ func charge_laser():
 	await get_tree().create_timer(0.5).timeout
 	disparar_laser_perron()
 	
-	# ✅ CORRECCIÓN 4: Restaurar el estado para el siguiente ciclo
+	
 	cargando = false
 	puede_apuntar = true # La línea vuelve a seguir al jugador
 	$Timer.start() # Inicia el cooldown de 5s
