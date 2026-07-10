@@ -2,7 +2,7 @@ extends Area2D
 var damage = 1
 var owna
 
-@export var velocidad: float = 250.0 # Más lentas que las tuyas para que dé tiempo de esquivar
+@export var velocidad: float = 250.0 
 var direccion: Vector2 = Vector2.ZERO
 
 func _ready() -> void:
