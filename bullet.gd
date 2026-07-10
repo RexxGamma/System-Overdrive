@@ -91,7 +91,7 @@ func _find_polygons(node: Node) -> void:
 func _create_runtime_wireframe(poly: Polygon2D) -> void:
 	var pts := poly.polygon
 	
-	# --- Calcular centroide ---
+	#Calcular centroide
 	var area := 0.0
 	var cx := 0.0
 	var cy := 0.0
@@ -106,7 +106,7 @@ func _create_runtime_wireframe(poly: Polygon2D) -> void:
 		return
 	var centro_local := Vector2(cx / (6.0 * area), cy / (6.0 * area))
 
-	# --- Crear un nodo de dibujo dinámico ---
+	#Crear un nodo de dibujo dinámico
 	var wire_node := Node2D.new()
 	wire_node.name = poly.name + "_RuntimeWire"
 	
@@ -121,7 +121,7 @@ func _create_runtime_wireframe(poly: Polygon2D) -> void:
 	# Forzamos un Z Index alto para que NADA en el juego lo tape (capas de fondo, etc.)
 	wire_node.z_index = 50
 	
-	# Conectamos el evento de dibujo de Godot dinámicamente usando una función Lambda
+	
 	wire_node.draw.connect(func():
 		var color: Color = poly.color
 		var offset_total = poly.offset # Usamos el offset interno del polígono
