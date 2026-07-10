@@ -18,7 +18,7 @@ To install the game,you can download the realease or open this itch.io link and 
 After that,you should decompress the .zip file,open the folder called "System_Overdrive" and open the .exe file if you're on windows or the .x86_64 file if you're on linux.
 
 _
-To download the project,you should click the "<> code" button and click "Download zip",after that you should decompress the .zip file and double click the .godot file. 
+To download the project,you should  open this link: https://drive.google.com/file/d/1k2bXcnzweDWE6ABrVmW9Av6zaWgcjMUC/view?usp=drive_link and download the project,after that you should decompress the .zip file and double click the .godot file. 
 
 
 note: if you download the source code,make sure to clone the repository or download the zip file only to get the source code,if you wan't to play the game i recommend you to download the game by the itch.io link
@@ -34,4 +34,5 @@ To dash you can use the left-shift key or the right click,the player will dash i
 ___________________________________________________________________________________________________________________
 # Developer Notes
 
-This is an MVP of the game and is under development right now,the game will update soon with QoL changes,bugfixes and more content!
+1. This is an MVP of the game and is under development right now,the game will update soon with QoL changes,bugfixes and more content!
+2. I can't upload files heaviest than 25MB so,the project is in a drive link
