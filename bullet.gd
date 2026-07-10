@@ -11,7 +11,7 @@ var started = false
 var HIT_PARTICLES = preload("res://Hit_Particles.tscn")
 var hit_particles_nodmg = preload("res://hitparticles(nodmg).tscn")
 
-@export var radio_defensa: float = 40.0  # ✅ NUEVO: Radio de destrucción
+@export var radio_defensa: float = 40.0
 
 func _ready() -> void:
 	started = true
@@ -37,7 +37,7 @@ func hit(area):
 	if area == null:
 		return
 	
-	# ✅ NUEVA LÓGICA: Destrucción por distancia
+	
 	if area is enmy_bllt or area is bullet:
 		var distancia = global_position.distance_to(area.global_position)
 		
@@ -49,7 +49,7 @@ func hit(area):
 			chispas2.emitting = true
 			
 			queue_free()
-			return  # ✅ Importante: salir de la función
+			return
 	
 	if !(area is hurtbox or shiesld):
 		return
