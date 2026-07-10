@@ -141,13 +141,13 @@ func _on_enemy_died() -> void:
 		wave_cleared.emit(current_wave)
 		print("¡OLEADA ", current_wave, " COMPLETADA!")
 		
-		# 🛡️ BLINDAJE 1: Si el nodo ya fue eliminado o la escena cambió, salir de la función.
+		
 		if not is_inside_tree():
 			return
 			
 		await get_tree().create_timer(3.0).timeout
 		
-		# ️ BLINDAJE 2: Verificar de nuevo por si el jugador murió durante los 3 segundos de espera
+		
 		if not is_inside_tree() or not is_player_alive:
 			return
 			
