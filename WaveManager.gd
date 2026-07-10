@@ -197,7 +197,7 @@ func generate_infinite_wave() -> void:
 	])
 	start_next_wave()
 
-# Llama a esta función cuando el jugador muera
+
 func player_died() -> void:
 	is_player_alive = false
 	is_wave_active = false
